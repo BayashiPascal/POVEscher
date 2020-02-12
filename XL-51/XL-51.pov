@@ -49,8 +49,11 @@ light_source {
     }
   }
   box {
-    <-0.5 * widthRoom, 0.5 * lengthRoom, -0.5 * lengthRoom + 37.0>
-    <-0.5 * widthRoom + 10.0, 0.5 * lengthRoom - 50.0, -0.5 * lengthRoom + 38.0>
+    #declare widthPlatform = 10.0;
+    #declare lengthPlatform = 52.0; //50.0;
+    #declare heightPlatform = 37.0;
+    <-0.5 * widthRoom, 0.5 * lengthRoom, -0.5 * lengthRoom + heightPlatform>
+    <-0.5 * widthRoom + widthPlatform, 0.5 * lengthRoom - lengthPlatform, -0.5 * lengthRoom + heightPlatform + 1.0>
     scale scaleBlock
   }
   texture {
