@@ -12,15 +12,17 @@
 
 // Texture of the blocks
 #declare texBlock = texture {
-  pigment { color White }
+  //pigment { color White }
+  pigment { checker color rgb 0, color rgb 1 }
+  scale scaleBlock
 }
 
 // Camera definition
-#declare posCamera = <0.0, 0.0, 0.0>;
+#declare posCamera = <-0.5 * widthRoom + 10.0, 2.0, 2.5>;
 #declare lookAt = <0.0, 0.2375 * lengthRoom, -0.5 * lengthRoom>;
 camera {
   ultra_wide_angle
-  angle 200
+  angle 160
   location posCamera
   look_at lookAt
   right x
@@ -50,8 +52,8 @@ light_source {
   }
   box {
     #declare widthPlatform = 10.0;
-    #declare lengthPlatform = 52.0; //50.0;
-    #declare heightPlatform = 37.0;
+    #declare lengthPlatform = 50.0;
+    #declare heightPlatform = 52.0;
     <-0.5 * widthRoom, 0.5 * lengthRoom, -0.5 * lengthRoom + heightPlatform>
     <-0.5 * widthRoom + widthPlatform, 0.5 * lengthRoom - lengthPlatform, -0.5 * lengthRoom + heightPlatform + 1.0>
     scale scaleBlock
