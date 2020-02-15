@@ -18,14 +18,14 @@
 }
 
 // Camera definition
-#declare posCamera = <0.0, 0.0, 0.5>;
+#declare posCamera = <0.0, 0.0, 0.0>;
 #declare lookAt = <0.0, 0.25 * lengthRoom, -0.5 * lengthRoom>;
 camera {
   cylinder 2
-  angle 200
+  angle 210
   location posCamera
   look_at lookAt
-  right x * 3.0
+  right x * 2.9
   up y
 }
 
