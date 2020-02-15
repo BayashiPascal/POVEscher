@@ -17,8 +17,9 @@
 }
 
 // Camera definition
-#declare posCamera = <0.0, 0.0, 0.0>;
-#declare lookAt = <0.0, 0.2375 * lengthRoom, -0.5 * lengthRoom>;
+//#declare posCamera = <0.0, 0.0, 5.0>;
+#declare posCamera = <0.0, 0.0, 2.0>;
+#declare lookAt = <0.0, 0.25 * lengthRoom, -0.5 * lengthRoom>;
 camera {
   cylinder 2
   angle 200
@@ -34,8 +35,8 @@ light_source {
   color rgb 1.0
 }
 
-// House of stairs
-#declare HouseOfStairs = union {
+// Walls
+#declare Walls = intersection {
   difference {
     box { 
       -0.5, 0.5
@@ -50,13 +51,36 @@ light_source {
     }
   }
   box {
-    #declare widthPlatform = 10.0;
-    #declare lengthPlatform = 50.0;
-    #declare heightPlatform = 52.0;
-    <-0.5 * widthRoom, 0.5 * lengthRoom, -0.5 * lengthRoom + heightPlatform>
-    <-0.5 * widthRoom + widthPlatform, 0.5 * lengthRoom - lengthPlatform, -0.5 * lengthRoom + heightPlatform + 1.0>
+    <-0.5, 0.0, 0.0>, 0.5
     scale scaleBlock
+    scale <widthRoom, lengthRoom, lengthRoom>
   }
+}
+
+// Platform
+#declare Platform = box {
+  #declare widthPlatform = 10.0;
+  #declare lengthPlatform = 50.0; //50.0;
+  #declare heightPlatform = 47.0; //52.0;
+  <-0.5 * widthRoom, 0.5 * lengthRoom, -0.5 * lengthRoom + heightPlatform>
+  <-0.5 * widthRoom + widthPlatform, 0.5 * lengthRoom - lengthPlatform, -0.5 * lengthRoom + heightPlatform + 1.0>
+  scale scaleBlock
+}
+
+// House of stairs
+#declare HouseOfStairs = union {
+  #declare iQuarter = 0;
+  #while (iQuarter < 4)
+    union {
+      object { Walls }
+      object { Platform }
+      rotate x * 90.0 * iQuarter
+      #if (iQuarter = 1 | iQuarter = 3)
+        scale <-1.0, 1.0, 1.0>
+      #end
+    }
+    #declare iQuarter = iQuarter + 1;
+  #end
   texture {
     texBlock
   } 
