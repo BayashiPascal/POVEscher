@@ -13,12 +13,12 @@
 // Texture of the blocks
 #declare texBlock = texture {
   pigment { checker color rgb 0, color rgb 1 }
+  translate 0.5*x
   scale scaleBlock
 }
 
 // Camera definition
-//#declare posCamera = <0.0, 0.0, 5.0>;
-#declare posCamera = <0.0, 0.0, 2.0>;
+#declare posCamera = <0.0, 0.0, 0.5>;
 #declare lookAt = <0.0, 0.25 * lengthRoom, -0.5 * lengthRoom>;
 camera {
   cylinder 2
@@ -58,13 +58,20 @@ light_source {
 }
 
 // Platform
-#declare Platform = box {
+#declare Platform = difference {
   #declare widthPlatform = 10.0;
-  #declare lengthPlatform = 50.0; //50.0;
-  #declare heightPlatform = 47.0; //52.0;
-  <-0.5 * widthRoom, 0.5 * lengthRoom, -0.5 * lengthRoom + heightPlatform>
-  <-0.5 * widthRoom + widthPlatform, 0.5 * lengthRoom - lengthPlatform, -0.5 * lengthRoom + heightPlatform + 1.0>
-  scale scaleBlock
+  #declare lengthPlatform = 50.0;
+  #declare heightPlatform = 43.0;
+  box {
+    <-0.5 * widthRoom, 0.5 * lengthRoom, -0.5 * lengthRoom + heightPlatform>
+    <-0.5 * widthRoom + widthPlatform, 0.5 * lengthRoom - lengthPlatform, -0.5 * lengthRoom + heightPlatform + 1.0>
+    scale scaleBlock
+  }
+  box {
+    <-0.5 * widthRoom + widthPlatform - 2, 0.5 * lengthRoom - lengthPlatform + 11, -0.5 * lengthRoom + heightPlatform - 0.1>
+    <-0.5 * widthRoom + widthPlatform + 1, 0.5 * lengthRoom - lengthPlatform - 1, -0.5 * lengthRoom + heightPlatform + 1.1>
+    scale scaleBlock
+  }
 }
 
 // House of stairs
