@@ -6,4 +6,4 @@
 \contentsline {subsection}{\numberline {2.4}Building dimensions}{7}
 \contentsline {subsection}{\numberline {2.5}View point}{8}
 \contentsline {section}{\numberline {3}Prototype in POV-Ray}{9}
-\contentsline {subsection}{\numberline {3.1}POV-Ray model}{9}
+\contentsline {section}{\numberline {4}Real model in POV-Ray}{31}
