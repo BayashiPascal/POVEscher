@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.17)  15 FEB 2020 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.17)  16 FEB 2020 10:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -829,27 +829,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
-[24 <./XL-51_7.png> <./checkDimensionViewPoint_4.png>] (./doc.aux) ) 
+(./XL-51_8.pov [24 <./XL-51_7.png> <./checkDimensionViewPoint_4.png>] [25])
+<./XL-51_8.png, id=125, 376.40625pt x 745.78625pt>
+File: ./XL-51_8.png Graphic file (type png)
+<use ./XL-51_8.png>
+Package pdftex.def Info: ./XL-51_8.png  used on input line 258.
+(pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
+[27 <./XL-51_8.png>] (./doc.aux) ) 
 Here is how much of TeX's memory you used:
- 13672 strings out of 493765
- 263016 string characters out of 6151500
- 390781 words of memory out of 5000000
- 16890 multiletter control sequences out of 15000+600000
+ 13679 strings out of 493765
+ 263124 string characters out of 6151500
+ 398781 words of memory out of 5000000
+ 16894 multiletter control sequences out of 15000+600000
  12918 words of font info for 50 fonts, out of 8000000 for 9000
  622 hyphenation exceptions out of 8191
  55i,6n,54p,455b,1470s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb
+>
 
 pdfTeX warning: pdflatex: no GlyphToUnicode entry has been inserted yet!
-Output written on doc.pdf (24 pages, 8217919 bytes).
+Output written on doc.pdf (27 pages, 8405595 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 151 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
