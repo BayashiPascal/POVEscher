@@ -12,9 +12,10 @@
 
 // Texture of the blocks
 #declare texBlock = texture {
-  pigment { checker color rgb 0, color rgb 1 }
-  translate 0.5*x
-  scale scaleBlock
+  pigment {color rgb 0.75}
+  //pigment { checker color rgb 0, color rgb 1 }
+  //translate 0.5*x
+  //scale scaleBlock
 }
 
 // Camera definition
@@ -31,7 +32,7 @@ camera {
 
 // Light source
 light_source {
-  posCamera
+  posCamera + 1.0
   color rgb 1.0
 }
 
