@@ -7,3 +7,5 @@
 \contentsline {subsection}{\numberline {2.5}View point}{8}
 \contentsline {section}{\numberline {3}Prototype in POV-Ray}{9}
 \contentsline {section}{\numberline {4}Real model in POV-Ray}{31}
+\contentsline {subsection}{\numberline {4.1}Block model}{31}
+\contentsline {subsection}{\numberline {4.2}Cleaning the prototype script}{33}
