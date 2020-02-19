@@ -47,7 +47,7 @@
   <
      0.5 * widthRoom - widthPlatformC, 
      0.5 * lengthRoom - lengthPlatformC + 2.0, 
-    -0.5 * lengthRoom + heightPlatformC
+    -0.5 * lengthRoom + heightPlatformC - 0.5
   >;
 
 #declare widthStairsB = 4;
@@ -74,7 +74,7 @@
   <
      0.5 * widthRoom - 3.0, 
      0.5 * lengthRoom - lengthPlatformC, 
-    -0.5 * lengthRoom + heightPlatformC
+    -0.5 * lengthRoom + heightPlatformC + 0.25
   >;
 
 // ------- Side walls definition -------
@@ -167,10 +167,36 @@
       -0.5 * lengthRoom + heightPlatformA
     >,
     <
+      -0.5 * widthRoom + widthPlatformA - 3, 
+       0.5 * lengthRoom - lengthPlatformA + 11, 
+      -0.5 * lengthRoom + heightPlatformA + 1.0
+    >)
+
+
+  MakeWall(
+    <
+      -0.5 * widthRoom + widthPlatformA - 3, 
+       0.5 * lengthRoom - lengthPlatformA, 
+      -0.5 * lengthRoom + heightPlatformA
+    >,
+    <
+      -0.5 * widthRoom + widthPlatformA - 2, 
+       0.5 * lengthRoom - lengthPlatformA + 4, 
+      -0.5 * lengthRoom + heightPlatformA + 1.0
+    >)
+  MakeWall(
+    <
+      -0.5 * widthRoom + widthPlatformA - 3, 
+       0.5 * lengthRoom - lengthPlatformA + 8, 
+      -0.5 * lengthRoom + heightPlatformA
+    >,
+    <
       -0.5 * widthRoom + widthPlatformA - 2, 
        0.5 * lengthRoom - lengthPlatformA + 11, 
       -0.5 * lengthRoom + heightPlatformA + 1.0
     >)
+
+
   scale scaleBlock
 }
 
