@@ -31,24 +31,14 @@
 #declare slopeUpStairsC = 1.0; // OK
 #declare slopeFrontStairsC = 1.0; // OK
 
+#declare heightPlatformC = 26;
 
 
 // Unknown
 
 
 #declare lengthRoom = // (bottom->top axis of the front wall)
-  96; // OK
-
-
-
-
-
-
-
-
-
-
-
+  96;
 
 
 // Deducted platforms' and stairs' dimensions
@@ -62,7 +52,6 @@
 #declare heightPlatformB = lengthRoom - lengthPlatformA + 3; // OK
 
 #declare widthPlatformC = widthStairsC; // OK
-#declare heightPlatformC = heightPlatformA - 15; // OK
 
 #declare widthRoom = // (right->left axis of the front wall)
   widthPlatformA + widthPlatformB + widthGapPlatformAPlatformB; // OK
@@ -76,7 +65,7 @@
 #declare slopeFrontStairsA = 
   (widthRoom - widthPlatformC - widthPlatformB + 1) / nbStairsA; // OK
 #declare slopeUpStairsA = 
-  (heightPlatformA - heightPlatformC) / nbStairsA;
+  (heightPlatformA - heightPlatformC) / nbStairsA; // OK
 
 #declare posStairsB = 
   <
@@ -87,7 +76,7 @@
 #declare slopeFrontStairsB = 
   (widthRoom - widthPlatformB - widthPlatformA) / nbStairsB; // OK
 #declare slopeUpStairsB =
-  (heightGapPlatformAPlatformB - 2) / nbStairsB;
+  (heightGapPlatformAPlatformB - 2) / nbStairsB; // OK
 
 #declare posStairsC = 
   <
