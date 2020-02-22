@@ -12,69 +12,87 @@
 
 #declare scaleBlock = <1.0, 0.5, 0.5>;
 
-// Width of the room (left-right axis of the lithography)
+// Measured platforms' and stairs' dimensions
 
-#declare widthRoom = 25.0;
+#declare widthStairsA = 4; // OK
+#declare nbStairsA = 10; // OK
 
-// Length of the room (top-bottom axis of the lithography)
+#declare widthStairsB = 4; // OK
+#declare nbStairsB = 8; // OK
 
-#declare lengthRoom = 102.0;
+#declare widthStairsC = 6; // OK
+#declare nbStairsC = 9; // OK
 
-// Platforms' dimensions
+#declare widthGapPlatformAPlatformB = 7; // OK
+#declare heightGapPlatformAPlatformB = 7; // OK
 
-#declare widthPlatformA  = 10.0;
-#declare lengthPlatformA = 50.0;
-#declare heightPlatformA = 43.0;
+#declare slopeUpStairsC = 1.0; // OK
+#declare slopeFrontStairsC = 1.0; // OK
 
-#declare widthPlatformB  = widthPlatformA - 2.0;
-#declare lengthPlatformB = heightPlatformA;
-#declare heightPlatformB = lengthPlatformA - 1.0;
 
-#declare widthPlatformC  = 6.0;
-#declare lengthPlatformC = lengthPlatformA - 4.0;
-#declare heightPlatformC = heightPlatformA - 15.0;
 
-// Stairs' dimensions
+// Unknown
 
-#declare widthStairsA = 4;
-#declare nbStairsA = 10;
-#declare slopeUpStairsA = 
-  (heightPlatformA - heightPlatformC - 1) / (nbStairsA - 1);
-#declare slopeFrontStairsA = 
-  (widthRoom - widthPlatformC - (widthPlatformA - 2.0)) / 
-  (nbStairsA - 1);
+#declare heightPlatformA = 42; //40.0;
+#declare lengthPlatformA = 52; //50.0;
+
+
+
+
+
+
+
+#declare slopeUpStairsA = 1.0;
+//  (heightPlatformA - heightPlatformC - 1) / (nbStairsA - 1);
+
+#declare slopeUpStairsB = 1.0;
+//  2.0 * (heightPlatformB - heightPlatformA - 2) / (nbStairsB - 1);
+
+
+
+
+
+// Deducted platforms' and stairs' dimensions
+
+#declare lengthRoom = // (bottom->top axis of the front wall)
+  2 * lengthPlatformA; // OK
+
+#declare widthPlatformA = widthStairsC + 4; // OK
+
+#declare widthPlatformB = widthPlatformA - 2; // OK
+#declare lengthPlatformB = heightPlatformA; // OK
+#declare heightPlatformB = lengthRoom - lengthPlatformA - 1; // OK
+
+#declare widthPlatformC = widthStairsC; // OK
+#declare lengthPlatformC = lengthPlatformA - 4; // OK
+#declare heightPlatformC = heightPlatformA - 16; // OK
+
+#declare widthRoom = // (right->left axis of the front wall)
+  widthPlatformA + widthPlatformB + widthGapPlatformAPlatformB; // OK
+
 #declare posStairsA = 
   <
-     0.5 * widthRoom - widthPlatformC, 
-     0.5 * lengthRoom - lengthPlatformC + 2.0, 
-    -0.5 * lengthRoom + heightPlatformC - 0.5
+     0.5 * widthRoom - widthPlatformC, // OK
+     0.5 * lengthRoom - (lengthPlatformC - widthStairsA / 2), // OK
+    -0.5 * lengthRoom + heightPlatformC // OK
   >;
+#declare slopeFrontStairsA = 
+  (widthRoom - widthPlatformC - widthPlatformB) / nbStairsA; // OK
 
-#declare widthStairsB = 4;
-#declare nbStairsB = 8;
-#declare slopeUpStairsB = 
-  2.0 * (heightPlatformB - heightPlatformA - 2) / (nbStairsB - 1);
-#declare slopeFrontStairsB = 
-  (widthRoom - widthPlatformB - widthPlatformA) / (nbStairsB - 1);
 #declare posStairsB = 
   <
-     0.5 * widthRoom - widthPlatformA, 
-    -0.5 * lengthRoom + heightPlatformA, 
-     0.5 * lengthRoom - lengthPlatformA - 15.0
+    -0.5 * widthRoom + widthPlatformA, // OK
+     0.5 * lengthRoom - lengthPlatformA + 11 + widthStairsB / 2, // OK
+    -0.5 * lengthRoom + heightPlatformA // OK
   >;
+#declare slopeFrontStairsB = 
+  (widthRoom - widthPlatformB - widthPlatformA) / nbStairsB; // OK
 
-#declare widthStairsC = 6;
-#declare nbStairsC = 9;
-#declare slopeUpStairsC = 
-  (lengthPlatformA - 16.0 - heightPlatformC) / (nbStairsC - 1);
-#declare slopeFrontStairsC = 
-  (lengthRoom - (lengthPlatformC + heightPlatformA + 1.0)) / 
-  (nbStairsC - 1);
 #declare posStairsC = 
   <
-     0.5 * widthRoom - 3.0, 
-     0.5 * lengthRoom - lengthPlatformC, 
-    -0.5 * lengthRoom + heightPlatformC + 0.25
+     0.5 * widthRoom - widthStairsC / 2, // OK
+     0.5 * lengthRoom - lengthPlatformC, // OK
+    -0.5 * lengthRoom + heightPlatformC // OK
   >;
 
 // ------- Side walls definition -------
@@ -251,12 +269,12 @@
 
 #declare StairsB = object {
   MakeStairs(
-     widthStairsB, 
-     nbStairsB, 
-     posStairsB, 
-     y * slopeUpStairsB, 
-     z, 
-    -x * slopeFrontStairsB)
+    widthStairsB, 
+    nbStairsB, 
+    posStairsB, 
+    z * slopeUpStairsB, 
+    y, 
+    x * slopeFrontStairsB)
   scale scaleBlock
 }
 
@@ -321,7 +339,7 @@ camera {
 // ------ Light ------
 
 light_source {
-  posCamera + 1.0
+  posCamera
   color rgb 1.0
 }
 

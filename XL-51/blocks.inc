@@ -88,6 +88,32 @@
     frontVec) 
   union {
     #local oneStairBottom = 
+      -0.5 * widthStair * rightVec;
+    #local oneStairTop = 
+      0.5 * widthStair * rightVec + upVec + frontVec;
+    #local iStair = 0;
+    #while (iStair < nbStair)
+      box {
+        oneStairBottom
+        oneStairTop
+        translate (frontVec + upVec) * iStair
+      }
+      #declare iStair = iStair + 1;
+    #end
+    translate startPos
+    BlockTex()
+  }
+#end
+
+#macro MakeStairsNew(
+    widthStair, 
+    nbStair, 
+    startPos, 
+    upVec, 
+    rightVec, 
+    frontVec) 
+  union {
+    #local oneStairBottom = 
       -0.5 * widthStair * rightVec + (1.0 - stairThickness) * vnormalize(upVec);
     #local oneStairTop = 
       0.5 * widthStair * rightVec + vnormalize(upVec) + frontVec;
