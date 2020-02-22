@@ -14,6 +14,8 @@
 
 // Measured platforms' and stairs' dimensions
 
+#declare lengthPlatformC = 46; // OK
+
 #declare widthStairsA = 4; // OK
 #declare nbStairsA = 10; // OK
 
@@ -33,8 +35,9 @@
 
 // Unknown
 
-#declare heightPlatformA = 42; //40.0;
-#declare lengthPlatformA = 52; //50.0;
+
+#declare lengthRoom = // (bottom->top axis of the front wall)
+  96; // OK
 
 
 
@@ -42,11 +45,7 @@
 
 
 
-#declare slopeUpStairsA = 1.0;
-//  (heightPlatformA - heightPlatformC - 1) / (nbStairsA - 1);
 
-#declare slopeUpStairsB = 1.0;
-//  2.0 * (heightPlatformB - heightPlatformA - 2) / (nbStairsB - 1);
 
 
 
@@ -54,18 +53,16 @@
 
 // Deducted platforms' and stairs' dimensions
 
-#declare lengthRoom = // (bottom->top axis of the front wall)
-  2 * lengthPlatformA; // OK
-
 #declare widthPlatformA = widthStairsC + 4; // OK
+#declare lengthPlatformA = lengthPlatformC + 4; // OK
+#declare heightPlatformA = lengthRoom - lengthPlatformC - nbStairsC; // OK
 
 #declare widthPlatformB = widthPlatformA - 2; // OK
 #declare lengthPlatformB = heightPlatformA; // OK
-#declare heightPlatformB = lengthRoom - lengthPlatformA - 1; // OK
+#declare heightPlatformB = lengthRoom - lengthPlatformA + 3; // OK
 
 #declare widthPlatformC = widthStairsC; // OK
-#declare lengthPlatformC = lengthPlatformA - 4; // OK
-#declare heightPlatformC = heightPlatformA - 16; // OK
+#declare heightPlatformC = heightPlatformA - 15; // OK
 
 #declare widthRoom = // (right->left axis of the front wall)
   widthPlatformA + widthPlatformB + widthGapPlatformAPlatformB; // OK
@@ -77,7 +74,9 @@
     -0.5 * lengthRoom + heightPlatformC // OK
   >;
 #declare slopeFrontStairsA = 
-  (widthRoom - widthPlatformC - widthPlatformB) / nbStairsA; // OK
+  (widthRoom - widthPlatformC - widthPlatformB + 1) / nbStairsA; // OK
+#declare slopeUpStairsA = 
+  (heightPlatformA - heightPlatformC) / nbStairsA;
 
 #declare posStairsB = 
   <
@@ -87,6 +86,8 @@
   >;
 #declare slopeFrontStairsB = 
   (widthRoom - widthPlatformB - widthPlatformA) / nbStairsB; // OK
+#declare slopeUpStairsB =
+  (heightGapPlatformAPlatformB - 2) / nbStairsB;
 
 #declare posStairsC = 
   <
