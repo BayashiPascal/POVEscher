@@ -345,7 +345,27 @@ XL-51.pov:\\
 \end{figure}
 \end{center}
 
-It looks nice but looking closely at the stairs make me realize it doesn't match the lithography. There is a problem in dimensions or position of the platforms. I try to fix that.\\
+It looks nice but looking closely at the stairs make me realize it doesn't match the lithography. There is a problem in dimensions or position of the platforms. I try to fix that, refactor completely the dimensions of my model, and doing so start to find inconsistencies in the drawing.\\
+
+First, the horizontal dimension of the front wall doens't match in its upper part and center part (24 blocks against 25 blocks).\\
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{./inconsistency_1.png}\\
+\end{figure}
+\end{center}
+
+Second, the red and blue lines below should have same dimension along the depth axis but they haven't (10 blocks against 9 blocks).\\
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{./inconsistency_2.png}\\
+\end{figure}
+\end{center}
+
+I'm really embarrassed. If the drawing is mathematically incorrect I have no way to reproduced it exactly in Pov-Ray... I have no choice but to find a compromise. I rework once again the dimensions of the model.\\
 
 \end{document}
 
