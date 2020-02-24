@@ -87,6 +87,16 @@ On the base of the following observation, I'll make another hypothesis: the wall
 
 If the previous hypothesis are true, the building is actually a paralellepiped whose left half section is the symmetry of the right half section rotated by 90 degrees relatively to the left-right axis in the image passing through its center.\\
 
+Lets also define names for the platforms and stairs.\\
+
+\begin{center}
+\begin{figure}[H]
+\centering\includegraphics[height=10cm]{./platformsName.png}
+\centering\includegraphics[height=10cm]{./stairsName.png}\\
+\end{figure}
+\end{center}
+
+
 \subsection{Building dimensions}
 
 The building's wall is almost (exception for the doors and stairs) entirely made of supposedly cubic blocks. Without any other indication for sizes, I'll take it as my reference. So the unit of measure will be one block (1bl) and I make the following hypothesis:\\
@@ -365,7 +375,33 @@ Second, the red and blue lines below should have same dimension along the depth 
 \end{figure}
 \end{center}
 
-I'm really embarrassed. If the drawing is mathematically incorrect I have no way to reproduced it exactly in Pov-Ray... I have no choice but to find a compromise. I rework once again the dimensions of the model.\\
+I'm really embarrassed. If the drawing is mathematically incorrect I have no way to reproduced it exactly in Pov-Ray... I have no choice but to find a compromise. I rework once again the dimensions of the model, and add the last latform and stairs, which reveals even more inconsistencies.\\
+
+XL-51.pov:\\
+\begin{scriptsize}
+\begin{ttfamily}
+\lstinputlisting[breaklines]{./XL-51_11.pov}
+\end{ttfamily}
+\end{scriptsize}
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{./XL-51_11.png}\\
+\end{figure}
+\end{center}
+
+\subsection{Reworking the model}
+
+Even if there are inconsistencies in the drawing I hope to find a better model and feel like there are problems in my model too. Then, I don't want to give up yet and try another approach. Until now I've placed the origin of the model at the center of the House, where the camera is. However it makes complication as the length of the House seems to be an odd number, and leads to half block in the center of the front wall when splitting it into two to apply symmetry. Thus, I want to try to rework the model by putting the origin of the world in the corner of the House.
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{./originCorner.png}\\
+\end{figure}
+\end{center}
+
 
 \end{document}
 

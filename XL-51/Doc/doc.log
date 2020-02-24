@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.17)  23 FEB 2020 10:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.17)  24 FEB 2020 11:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -654,309 +654,348 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 [6 <./mirror3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
-
- []
-
-<./dimension.png, id=37, 100.4553pt x 192.72pt>
-File: ./dimension.png Graphic file (type png)
-<use ./dimension.png>
-Package pdftex.def Info: ./dimension.png  used on input line 102.
+<./platformsName.png, id=37, 100.4553pt x 192.72pt>
+File: ./platformsName.png Graphic file (type png)
+<use ./platformsName.png>
+Package pdftex.def Info: ./platformsName.png  used on input line 94.
 (pdftex.def)             Requested size: 148.30975pt x 284.52756pt.
+<./stairsName.png, id=38, 100.4553pt x 192.72pt>
+File: ./stairsName.png Graphic file (type png)
+<use ./stairsName.png>
+Package pdftex.def Info: ./stairsName.png  used on input line 95.
+(pdftex.def)             Requested size: 148.30975pt x 284.52756pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-[7 <./dimension.png>]
-<./viewpoint.png, id=43, 100.4553pt x 192.72pt>
-File: ./viewpoint.png Graphic file (type png)
-<use ./viewpoint.png>
-Package pdftex.def Info: ./viewpoint.png  used on input line 112.
+[7 <./platformsName.png> <./stairsName.png>]
+<./dimension.png, id=45, 100.4553pt x 192.72pt>
+File: ./dimension.png Graphic file (type png)
+<use ./dimension.png>
+Package pdftex.def Info: ./dimension.png  used on input line 112.
 (pdftex.def)             Requested size: 148.30975pt x 284.52756pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+<./viewpoint.png, id=46, 100.4553pt x 192.72pt>
+File: ./viewpoint.png Graphic file (type png)
+<use ./viewpoint.png>
+Package pdftex.def Info: ./viewpoint.png  used on input line 122.
+(pdftex.def)             Requested size: 148.30975pt x 284.52756pt.
+[8 <./dimension.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-[8 <./viewpoint.png>] (./XL-51_1.pov)
-<./XL-51_1.png, id=48, 376.40625pt x 745.78625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+(./XL-51_1.pov [9 <./viewpoint.png>])
+<./XL-51_1.png, id=55, 376.40625pt x 745.78625pt>
 File: ./XL-51_1.png Graphic file (type png)
 <use ./XL-51_1.png>
-Package pdftex.def Info: ./XL-51_1.png  used on input line 134.
+Package pdftex.def Info: ./XL-51_1.png  used on input line 144.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
- [9]
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
-
- []
-
-<./checkDimensionViewPoint_1.png, id=53, 376.40625pt x 745.78625pt>
-File: ./checkDimensionViewPoint_1.png Graphic file (type png)
-<use ./checkDimensionViewPoint_1.png>
-Package pdftex.def Info: ./checkDimensionViewPoint_1.png  used on input line 14
-2.
-(pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
-[10 <./XL-51_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-
- []
-
-
+ [10]
 Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+<./checkDimensionViewPoint_1.png, id=60, 376.40625pt x 745.78625pt>
+File: ./checkDimensionViewPoint_1.png Graphic file (type png)
+<use ./checkDimensionViewPoint_1.png>
+Package pdftex.def Info: ./checkDimensionViewPoint_1.png  used on input line 15
+2.
+(pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
+[11 <./XL-51_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-(./XL-51_2.pov [11 <./checkDimensionViewPoint_1.png>])
-<./XL-51_2.png, id=62, 376.40625pt x 745.78625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+(./XL-51_2.pov [12 <./checkDimensionViewPoint_1.png>])
+<./XL-51_2.png, id=69, 376.40625pt x 745.78625pt>
 File: ./XL-51_2.png Graphic file (type png)
 <use ./XL-51_2.png>
-Package pdftex.def Info: ./XL-51_2.png  used on input line 161.
+Package pdftex.def Info: ./XL-51_2.png  used on input line 171.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
-<./checkDimensionViewPoint_2.png, id=63, 93.4692pt x 178.9887pt>
+<./checkDimensionViewPoint_2.png, id=70, 93.4692pt x 178.9887pt>
 File: ./checkDimensionViewPoint_2.png Graphic file (type png)
 <use ./checkDimensionViewPoint_2.png>
-Package pdftex.def Info: ./checkDimensionViewPoint_2.png  used on input line 16
+Package pdftex.def Info: ./checkDimensionViewPoint_2.png  used on input line 17
 2.
 (pdftex.def)             Requested size: 148.59819pt x 284.52756pt.
- [12]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
-(./XL-51_3.pov [13 <./XL-51_2.png> <./checkDimensionViewPoint_2.png>])
-<./XL-51_3.png, id=73, 376.40625pt x 745.78625pt>
+(./XL-51_3.pov [14 <./XL-51_2.png> <./checkDimensionViewPoint_2.png>])
+<./XL-51_3.png, id=80, 376.40625pt x 745.78625pt>
 File: ./XL-51_3.png Graphic file (type png)
 <use ./XL-51_3.png>
-Package pdftex.def Info: ./XL-51_3.png  used on input line 177.
+Package pdftex.def Info: ./XL-51_3.png  used on input line 187.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
- [14]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+ [15]
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
-(./XL-51_4.pov [15 <./XL-51_3.png>])
-<./XL-51_4.png, id=81, 376.40625pt x 745.78625pt>
+(./XL-51_4.pov [16 <./XL-51_3.png>])
+<./XL-51_4.png, id=88, 376.40625pt x 745.78625pt>
 File: ./XL-51_4.png Graphic file (type png)
 <use ./XL-51_4.png>
-Package pdftex.def Info: ./XL-51_4.png  used on input line 194.
+Package pdftex.def Info: ./XL-51_4.png  used on input line 204.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
- [16]
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+ [17]
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-(./XL-51_5.pov [17 <./XL-51_4.png>])
-<./XL-51_5.png, id=89, 376.40625pt x 745.78625pt>
+(./XL-51_5.pov [18 <./XL-51_4.png>])
+<./XL-51_5.png, id=96, 376.40625pt x 745.78625pt>
 File: ./XL-51_5.png Graphic file (type png)
 <use ./XL-51_5.png>
-Package pdftex.def Info: ./XL-51_5.png  used on input line 209.
+Package pdftex.def Info: ./XL-51_5.png  used on input line 219.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
-<./checkDimensionViewPoint_3.png, id=90, 180.675pt x 357.9774pt>
+<./checkDimensionViewPoint_3.png, id=97, 180.675pt x 357.9774pt>
 File: ./checkDimensionViewPoint_3.png Graphic file (type png)
 <use ./checkDimensionViewPoint_3.png>
-Package pdftex.def Info: ./checkDimensionViewPoint_3.png  used on input line 21
+Package pdftex.def Info: ./checkDimensionViewPoint_3.png  used on input line 22
 0.
 (pdftex.def)             Requested size: 143.6056pt x 284.52756pt.
- [18]
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+ [19]
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
-(./XL-51_6.pov [19 <./XL-51_5.png> <./checkDimensionViewPoint_3.png>] [20])
-<./XL-51_6.png, id=103, 376.40625pt x 745.78625pt>
+(./XL-51_6.pov [20 <./XL-51_5.png> <./checkDimensionViewPoint_3.png>] [21])
+<./XL-51_6.png, id=110, 376.40625pt x 745.78625pt>
 File: ./XL-51_6.png Graphic file (type png)
 <use ./XL-51_6.png>
-Package pdftex.def Info: ./XL-51_6.png  used on input line 225.
+Package pdftex.def Info: ./XL-51_6.png  used on input line 235.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
-(./XL-51_7.pov [21 <./XL-51_6.png>] [22])
-<./XL-51_7.png, id=111, 376.40625pt x 745.78625pt>
+(./XL-51_7.pov [22 <./XL-51_6.png>] [23])
+<./XL-51_7.png, id=118, 376.40625pt x 745.78625pt>
 File: ./XL-51_7.png Graphic file (type png)
 <use ./XL-51_7.png>
-Package pdftex.def Info: ./XL-51_7.png  used on input line 240.
+Package pdftex.def Info: ./XL-51_7.png  used on input line 250.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
-<./checkDimensionViewPoint_4.png, id=112, 376.40625pt x 745.78625pt>
+<./checkDimensionViewPoint_4.png, id=119, 376.40625pt x 745.78625pt>
 File: ./checkDimensionViewPoint_4.png Graphic file (type png)
 <use ./checkDimensionViewPoint_4.png>
-Package pdftex.def Info: ./checkDimensionViewPoint_4.png  used on input line 24
+Package pdftex.def Info: ./checkDimensionViewPoint_4.png  used on input line 25
 1.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
- [23]
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
-(./XL-51_8.pov [24 <./XL-51_7.png> <./checkDimensionViewPoint_4.png>] [25])
-<./XL-51_8.png, id=125, 376.40625pt x 745.78625pt>
+(./XL-51_8.pov [25 <./XL-51_7.png> <./checkDimensionViewPoint_4.png>] [26])
+<./XL-51_8.png, id=132, 376.40625pt x 745.78625pt>
 File: ./XL-51_8.png Graphic file (type png)
 <use ./XL-51_8.png>
-Package pdftex.def Info: ./XL-51_8.png  used on input line 256.
+Package pdftex.def Info: ./XL-51_8.png  used on input line 266.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
 
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
-(./XL-51_9.pov [27 <./XL-51_8.png>] [28] [29]) [30]
-<./XL-51_9.png, id=142, 376.40625pt x 745.78625pt>
+(./XL-51_9.pov [28 <./XL-51_8.png>] [29] [30]) [31]
+<./XL-51_9.png, id=150, 376.40625pt x 745.78625pt>
 File: ./XL-51_9.png Graphic file (type png)
 <use ./XL-51_9.png>
-Package pdftex.def Info: ./XL-51_9.png  used on input line 271.
+Package pdftex.def Info: ./XL-51_9.png  used on input line 281.
 (pdftex.def)             Requested size: 143.60446pt x 284.52756pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
-(./block_1.pov [31 <./XL-51_9.png>] [32])
-<./block_1.png, id=151, 803.0pt x 642.4pt>
+(./block_1.pov [32 <./XL-51_9.png>] [33])
+<./block_1.png, id=158, 803.0pt x 642.4pt>
 File: ./block_1.png Graphic file (type png)
 <use ./block_1.png>
-Package pdftex.def Info: ./block_1.png  used on input line 294.
+Package pdftex.def Info: ./block_1.png  used on input line 304.
 (pdftex.def)             Requested size: 170.71652pt x 136.57436pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--305
+Underfull \hbox (badness 10000) in paragraph at lines 312--315
 
  []
 
-(./blocks_1.inc [33 <./block_1.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 309--312
+(./blocks_1.inc [34 <./block_1.png>])
+Underfull \hbox (badness 10000) in paragraph at lines 319--322
 
  []
 
-(./clean_prototype.pov [34] [35] [36] [37] [38])
-<./clean_prototype.png, id=172, 376.40625pt x 745.78625pt>
+(./clean_prototype.pov [35] [36] [37] [38] [39])
+<./clean_prototype.png, id=179, 376.40625pt x 745.78625pt>
 File: ./clean_prototype.png Graphic file (type png)
 <use ./clean_prototype.png>
-Package pdftex.def Info: ./clean_prototype.png  used on input line 319.
+Package pdftex.def Info: ./clean_prototype.png  used on input line 329.
 (pdftex.def)             Requested size: 170.71652pt x 338.2522pt.
- [39]
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+ [40]
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--330
+Underfull \hbox (badness 10000) in paragraph at lines 337--340
 
  []
 
-(./blocks_2.inc [40 <./clean_prototype.png>] [41])
-Underfull \hbox (badness 10000) in paragraph at lines 334--337
+(./blocks_2.inc [41 <./clean_prototype.png>] [42])
+Underfull \hbox (badness 10000) in paragraph at lines 344--347
 
  []
 
-(./XL-51_10.pov [42] [43] [44] [45] [46] [47])
-<./XL-51_10.png, id=202, 376.40625pt x 745.78625pt>
+(./XL-51_10.pov [43] [44] [45] [46] [47] [48])
+<./XL-51_10.png, id=209, 376.40625pt x 745.78625pt>
 File: ./XL-51_10.png Graphic file (type png)
 <use ./XL-51_10.png>
-Package pdftex.def Info: ./XL-51_10.png  used on input line 344.
+Package pdftex.def Info: ./XL-51_10.png  used on input line 354.
 (pdftex.def)             Requested size: 170.71652pt x 338.2522pt.
- [48 <./XL-51_10.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 348--349
+ [49 <./XL-51_10.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
-<./inconsistency_1.png, id=207, 211.2693pt x 180.1932pt>
+<./inconsistency_1.png, id=215, 211.2693pt x 180.1932pt>
 File: ./inconsistency_1.png Graphic file (type png)
 <use ./inconsistency_1.png>
-Package pdftex.def Info: ./inconsistency_1.png  used on input line 355.
+Package pdftex.def Info: ./inconsistency_1.png  used on input line 365.
 (pdftex.def)             Requested size: 170.71652pt x 145.60649pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
-<./inconsistency_2.png, id=208, 340.1508pt x 213.1965pt>
+<./inconsistency_2.png, id=216, 340.1508pt x 213.1965pt>
 File: ./inconsistency_2.png Graphic file (type png)
 <use ./inconsistency_2.png>
-Package pdftex.def Info: ./inconsistency_2.png  used on input line 364.
+Package pdftex.def Info: ./inconsistency_2.png  used on input line 374.
 (pdftex.def)             Requested size: 170.71652pt x 107.00136pt.
-[49 <./inconsistency_1.png> <./inconsistency_2.png>] (./doc.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+[50 <./inconsistency_1.png> <./inconsistency_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 380--383
+
+ []
+
+(./XL-51_11.pov [51] [52] [53] [54] [55] [56])
+<./XL-51_11.png, id=242, 376.40625pt x 745.78625pt>
+File: ./XL-51_11.png Graphic file (type png)
+<use ./XL-51_11.png>
+Package pdftex.def Info: ./XL-51_11.png  used on input line 390.
+(pdftex.def)             Requested size: 170.71652pt x 338.2522pt.
+ [57]
+<./originCorner.png, id=246, 100.4553pt x 192.72pt>
+File: ./originCorner.png Graphic file (type png)
+<use ./originCorner.png>
+Package pdftex.def Info: ./originCorner.png  used on input line 401.
+(pdftex.def)             Requested size: 170.71652pt x 327.51965pt.
+ [58 <./XL-51_11.png>]
+[59 <./originCorner.png>] (./doc.aux) ) 
 Here is how much of TeX's memory you used:
- 13724 strings out of 493765
- 263939 string characters out of 6151500
+ 13746 strings out of 493765
+ 264370 string characters out of 6151500
  450781 words of memory out of 5000000
- 16918 multiletter control sequences out of 15000+600000
+ 16934 multiletter control sequences out of 15000+600000
  12918 words of font info for 50 fonts, out of 8000000 for 9000
  622 hyphenation exceptions out of 8191
- 55i,6n,54p,455b,1469s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmtt8.pfb>
+ 55i,6n,54p,582b,1469s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
+8.pfb>
 
 pdfTeX warning: pdflatex: no GlyphToUnicode entry has been inserted yet!
-Output written on doc.pdf (49 pages, 14000315 bytes).
+Output written on doc.pdf (59 pages, 17088355 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 275 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 

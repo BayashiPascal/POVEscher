@@ -14,58 +14,58 @@
 
 // Measured platforms' and stairs' dimensions
 
-#declare widthPlatformA = 10; // OK
+#declare widthPlatformA = 10;
 
-#declare lengthPlatformC = 46; // OK
-#declare widthPlatformC = 6; // OK
+#declare lengthPlatformC = 46;
+#declare widthPlatformC = 6;
 
-#declare widthPlatformD = 4; // OK
+#declare widthPlatformD = 4;
 
-#declare widthGapPlatformAPlatformB = 7; // OK
-#declare heightGapPlatformAPlatformB = 6; // OK
-#declare heightGapPlatformBPlatformC = 24; // OK
+#declare widthGapPlatformAPlatformB = 7;
+#declare heightGapPlatformAPlatformB = 6;
+#declare heightGapPlatformBPlatformC = 24;
 
-#declare widthStairsA = 4; // OK
-#declare nbStairsA = 10; // OK
+#declare widthStairsA = 4;
+#declare nbStairsA = 10;
 
-#declare widthStairsB = 4; // OK
-#declare nbStairsB = 8; // OK
+#declare widthStairsB = 4;
+#declare nbStairsB = 8;
 
-#declare nbStairsC = 12; // OK
-#declare widthStairsC = 6; // OK
-#declare slopeUpStairsC = 1.0; // OK
-#declare slopeFrontStairsC = 1.0; // OK
+#declare nbStairsC = 12;
+#declare widthStairsC = 6;
+#declare slopeUpStairsC = 1.0;
+#declare slopeFrontStairsC = 1.0;
 
-#declare nbStairsD = 13; // OK
-#declare widthStairsD = 6; // OK
-#declare slopeUpStairsD = 1.0; // OK
-#declare slopeFrontStairsD = 1.0; // OK
+#declare nbStairsD = 13;
+#declare widthStairsD = 6;
+#declare slopeUpStairsD = 1.0;
+#declare slopeFrontStairsD = 1.0;
 
-#declare nbStairsE = 15; // OK
-#declare widthStairsE = 6; // OK
-#declare slopeUpStairsE = 1.0; // OK
-#declare slopeFrontStairsE = 1.0; // OK
+#declare nbStairsE = 15;
+#declare widthStairsE = 6;
+#declare slopeUpStairsE = 1.0;
+#declare slopeFrontStairsE = 1.0;
 
 // Deducted platforms' and stairs' dimensions
 
-#declare heightPlatformC = nbStairsD + nbStairsE - 1; // OK
+#declare heightPlatformC = nbStairsD + nbStairsE - 1;
 
-#declare heightPlatformD = nbStairsD - 1; // OK
-#declare lengthPlatformD = widthStairsD + widthStairsE; // OK
+#declare heightPlatformD = nbStairsD - 1;
+#declare lengthPlatformD = widthStairsD + widthStairsE;
 
 #declare widthRoom = // (right->left axis of the front wall)
-  widthPlatformC + widthPlatformD + nbStairsE; // OK
+  widthPlatformC + widthPlatformD + nbStairsE;
 
-#declare lengthPlatformA = lengthPlatformC + 4; // OK
+#declare lengthPlatformA = lengthPlatformC + 4;
 
-#declare widthPlatformB = widthPlatformA - 2; // OK
+#declare widthPlatformB = widthPlatformA - 2;
 #declare heightPlatformB = 
-  heightPlatformC + heightGapPlatformBPlatformC; // OK
+  heightPlatformC + heightGapPlatformBPlatformC;
 
 #declare heightPlatformA = 
-  heightPlatformB - heightGapPlatformAPlatformB; // OK
+  heightPlatformB - heightGapPlatformAPlatformB;
 
-#declare lengthPlatformB = heightPlatformA; // OK
+#declare lengthPlatformB = heightPlatformA;
 
 #declare lengthRoom = // (bottom->top axis of the front wall)
   heightPlatformB + lengthPlatformA;
@@ -116,16 +116,18 @@
 
 // ------- Side walls definition -------
 
+#declare lengthRoomSideWall = lengthRoom + 1;
+
 #declare SideWallA = union {
   MakeWall(
     <
       -0.5 * widthRoom - 1.0,
        0.0,
-       -0.5 * lengthRoom
+       -0.5 * lengthRoomSideWall
     >,
     <
       -0.5 * widthRoom,
-       0.5 * lengthRoom,
+       0.5 * lengthRoomSideWall,
        0.0
     >)
   scale scaleBlock
@@ -136,11 +138,11 @@
     <
       0.5 * widthRoom,
       0.0,
-      -0.5 * lengthRoom
+      -0.5 * lengthRoomSideWall
     >,
     <
       0.5 * widthRoom + 1.0,
-      0.5 * lengthRoom,
+      0.5 * lengthRoomSideWall,
       0.0
     >)
   scale scaleBlock
@@ -151,12 +153,12 @@
     <
       -0.5 * widthRoom,
        0.0,
-       -0.5 * lengthRoom - 1.0
+       -0.5 * lengthRoomSideWall - 1.0
     >,
     <
       0.5 * widthRoom,
-      0.5 * lengthRoom,
-      -0.5 * lengthRoom
+      0.5 * lengthRoomSideWall,
+      -0.5 * lengthRoomSideWall
     >)
   scale scaleBlock
 }
@@ -165,12 +167,12 @@
   MakeWall(
     <
       -0.5 * widthRoom,
-       0.5 * lengthRoom,
-      -0.5 * lengthRoom
+       0.5 * lengthRoomSideWall,
+      -0.5 * lengthRoomSideWall
     >,
     <
       0.5 * widthRoom,
-      0.5 * lengthRoom + 1.0,
+      0.5 * lengthRoomSideWall + 1.0,
        0.0
     >)
   scale scaleBlock
@@ -384,7 +386,6 @@
 // ------ Camera ------
 
 #declare posCamera = <0.0, 0.0, 0.0>;
-//#declare lookAt = <0.0, 0.25 * lengthRoom, -0.5 * lengthRoom>;
 #declare lookAt = <0.0, 0.2 * lengthRoom, -0.5 * lengthRoom>;
 
 camera {

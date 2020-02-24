@@ -6,7 +6,8 @@
 \contentsline {subsection}{\numberline {2.4}Building dimensions}{7}
 \contentsline {subsection}{\numberline {2.5}View point}{8}
 \contentsline {section}{\numberline {3}Prototype in POV-Ray}{9}
-\contentsline {section}{\numberline {4}Final model in POV-Ray}{31}
-\contentsline {subsection}{\numberline {4.1}Block model}{31}
-\contentsline {subsection}{\numberline {4.2}Cleaning the prototype script}{33}
-\contentsline {subsection}{\numberline {4.3}Stair model}{40}
+\contentsline {section}{\numberline {4}Final model in POV-Ray}{32}
+\contentsline {subsection}{\numberline {4.1}Block model}{32}
+\contentsline {subsection}{\numberline {4.2}Cleaning the prototype script}{34}
+\contentsline {subsection}{\numberline {4.3}Stair model}{41}
+\contentsline {subsection}{\numberline {4.4}Reworking the model}{58}
