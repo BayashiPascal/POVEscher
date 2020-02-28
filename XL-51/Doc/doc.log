@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.17)  24 FEB 2020 12:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.17)  28 FEB 2020 23:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -961,45 +961,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 379--380
 
  []
 
-[50 <./inconsistency_1.png> <./inconsistency_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 381--384
-
- []
-
-(./XL-51_11.pov [51] [52] [53] [54] [55] [56])
+[50 <./inconsistency_1.png> <./inconsistency_2.png>] (./XL-51_11.pov [51]
+[52] [53] [54] [55] [56])
 <./XL-51_11.png, id=244, 376.40625pt x 745.78625pt>
 File: ./XL-51_11.png Graphic file (type png)
 <use ./XL-51_11.png>
-Package pdftex.def Info: ./XL-51_11.png  used on input line 391.
+Package pdftex.def Info: ./XL-51_11.png  used on input line 390.
 (pdftex.def)             Requested size: 170.71652pt x 338.2522pt.
  [57]
 <./originCorner.png, id=248, 100.4553pt x 192.72pt>
 File: ./originCorner.png Graphic file (type png)
 <use ./originCorner.png>
-Package pdftex.def Info: ./originCorner.png  used on input line 402.
+Package pdftex.def Info: ./originCorner.png  used on input line 401.
 (pdftex.def)             Requested size: 170.71652pt x 327.51965pt.
  [58 <./XL-51_11.png>]
-[59 <./originCorner.png>] (./doc.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
+
+ []
+
+(./XL-51_12.pov [59 <./originCorner.png>] [60] [61] [62] [63] [64] [65]
+[66])
+<./XL-51_12.png, id=279, 376.40625pt x 745.78625pt>
+File: ./XL-51_12.png Graphic file (type png)
+<use ./XL-51_12.png>
+Package pdftex.def Info: ./XL-51_12.png  used on input line 416.
+(pdftex.def)             Requested size: 170.71652pt x 338.2522pt.
+ [67]
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
+
+ []
+
+[68 <./XL-51_12.png>] (./doc.aux) ) 
 Here is how much of TeX's memory you used:
- 13751 strings out of 493765
- 264462 string characters out of 6151500
+ 13758 strings out of 493765
+ 264577 string characters out of 6151500
  449781 words of memory out of 5000000
- 16938 multiletter control sequences out of 15000+600000
+ 16942 multiletter control sequences out of 15000+600000
  12918 words of font info for 50 fonts, out of 8000000 for 9000
  622 hyphenation exceptions out of 8191
  55i,6n,54p,582b,1469s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
-8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
+b>
 
 pdfTeX warning: pdflatex: no GlyphToUnicode entry has been inserted yet!
-Output written on doc.pdf (59 pages, 18000450 bytes).
+Output written on doc.pdf (68 pages, 18357284 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
+ 308 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
