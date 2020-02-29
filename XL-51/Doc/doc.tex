@@ -391,7 +391,7 @@ I'm really embarrassed. If the drawing is mathematically incorrect I have no way
 \end{figure}
 \end{center}
 
-\subsection{Reworking the model}
+\subsection{Moving the origin to the corner of the House}
 
 Even if there are inconsistencies in the drawing I hope to find a better model and feel like there are problems in my model too. Then, I don't want to give up yet and try another approach. Until now I've placed the origin of the model at the center of the House, where the camera is. However it makes complication as the length of the House seems to be an odd number, and leads to half block in the center of the front wall when splitting it into two to apply symmetry. Thus, I want to try to rework the model by putting the origin of the world in the corner of the House.
 
@@ -402,8 +402,14 @@ Even if there are inconsistencies in the drawing I hope to find a better model a
 \end{figure}
 \end{center}
 
-Finally I reach a model which still doesn't match perfectly the lithography but is the one that please me the most until now.\\
+blocks.inc:\\
+\begin{scriptsize}
+\begin{ttfamily}
+\lstinputlisting[breaklines]{./blocks_3.inc}
+\end{ttfamily}
+\end{scriptsize}
 
+XL-51.pov:\\
 \begin{scriptsize}
 \begin{ttfamily}
 \lstinputlisting[breaklines]{./XL-51_12.pov}
@@ -417,7 +423,13 @@ Finally I reach a model which still doesn't match perfectly the lithography but 
 \end{figure}
 \end{center}
 
-The red line is here to mark the limit of the quarter which is repeated to help debug the model.\\
+There are still parts not matching the lithography but this model is the one that please me the most until now and there is no way to match it perfectly due to inconsistencies. I could certainly find a solution if I give up on the symetric generation of the House, i.e. not building the House by modeling only one quarter and rotating and applying a symmetry to get the others, and instead modeling each element individually.\\
+
+But I think it would not be respectful of the spirit of Escher. He was telling of himself he's not an artist but a mathematician, so I believe a model mathematically correct is nearer to what he was actually thinking of.\\
+
+By the way the mistakes in his lithography don't decrease my love for his work at all. Rather, going myself through the complexity of what he made by hand while I'm doing it with a computer makes me more than ever respectful and appreciative of his genius.\\
+
+\subsection{Finalization of the model}
 
 \end{document}
 

@@ -4,10 +4,6 @@
 
 #include "blocks.inc"
 
-// Placeholder TO BE REMOVED
-#declare nothing = box {0,0}
-#declare lengthPlatformC = 44;
-
 // ------ Scene elements' dimensions ------
 
 // Unit is one block size
@@ -46,6 +42,10 @@
 
 #declare widthDoorE = 19;
 #declare heightDoorE = 18;
+
+// Empirically deducted dimensions
+
+#declare lengthPlatformC = 44;
 
 // Deducted platforms' and stairs' dimensions
 
@@ -419,14 +419,14 @@
 // ------ Camera ------
 
 #declare posCamera = <widthRoom / 2, lengthRoom / 2, lengthRoom / 2> * scaleBlock;
-#declare lookAt = <widthRoom / 2, 0, 0.225 * lengthRoom> * scaleBlock;
+#declare lookAt = <widthRoom / 2, 0, 0.25 * lengthRoom> * scaleBlock;
 
 camera {
   cylinder 2
   angle 210
   location posCamera
   look_at lookAt
-  right x * 3.6
+  right x * 3.8
   up y
 }
 
@@ -506,4 +506,4 @@ object {
   scale scaleBlock
 }
 
-object { QuarterFrame }
+//object { QuarterFrame }
