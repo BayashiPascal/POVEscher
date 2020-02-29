@@ -130,7 +130,7 @@ Without any other information I'll make the following hypothesis:\\
 
 Following the previous hypothesis I can infer some properties of the optic of the viewer: an ultra wide lens spanning 180 degrees along left-right and top-bottom axis.\\
 
-\section{Prototype in POV-Ray}
+\section{Prototype model}
 
 I've first make a prototype model of the walls without doors, stairways, platforms and Curl-ups to verify the hypothesis about the optic and dimensions. It comes as follow:\\
 
@@ -287,7 +287,7 @@ The stairs and platform fit very well altogether, but there is some deviation be
 
 I think it's enough for the prototype. The remaining stairs, doors and external walls should not cause problems given what matches so well in the prototype. So I move on to the real model.\\
 
-\section{Final model in POV-Ray}
+\section{House model}
 
 \subsection{Block model}
 
@@ -430,6 +430,44 @@ But I think it would not be respectful of the spirit of Escher. He was telling o
 By the way the mistakes in his lithography don't decrease my love for his work at all. Rather, going myself through the complexity of what he made by hand while I'm doing it with a computer makes me more than ever respectful and appreciative of his genius.\\
 
 \subsection{Finalization of the model}
+
+Now I add the doors, external walls. I also do some minute arrangement to the dimensions of the stairs for a perfect fit and extend the platform outside the House where necessary. And the final model for the House is finished.\\
+
+blocks.inc:\\
+\begin{scriptsize}
+\begin{ttfamily}
+\lstinputlisting[breaklines]{./blocks_4.inc}
+\end{ttfamily}
+\end{scriptsize}
+
+XL-51.pov:\\
+\begin{scriptsize}
+\begin{ttfamily}
+\lstinputlisting[breaklines]{./XL-51_13.pov}
+\end{ttfamily}
+\end{scriptsize}
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{./XL-51_13.png}\\
+\end{figure}
+\end{center}
+
+The single quarter which is repeated four time is shown below:\\
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{./quarter.png}\\
+\end{figure}
+\end{center}
+
+\section{Light model}
+
+Now I have to solve another problem which is the lighting of the House.\\
+
+Until now I was using one point light at the location of the camera. Instead I want to use the shadows in the lithography to search for the position of the lights. For example we see clearly that there is light coming from the outside of the doors in the front wall. I start from there.\\
 
 \end{document}
 
