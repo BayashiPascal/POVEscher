@@ -4,6 +4,10 @@
 
 #include "blocks.inc"
 
+// Rendering parameters
+
+background { color rgb 1.0 }
+
 // ------ Scene elements' dimensions ------
 
 // Unit is one block size
@@ -14,7 +18,6 @@
 
 // Measured platforms' and stairs' dimensions
 
-#declare nbStairsA = 10;
 #declare widthStairsA = 4;
 
 #declare widthStairsB = 4;
@@ -40,12 +43,29 @@
 
 #declare widthPlatformD = 4;
 
+#declare heightDoorA = 11;
+#declare widthDoorA = 7;
+
+#declare heightDoorB = 8;
+#declare widthDoorB = 6;
+
+#declare heightDoorC = 9;
+#declare widthDoorC = 6;
+
+#declare heightDoorD = 6;
+#declare widthDoorD = 4;
+
 #declare widthDoorE = 19;
 #declare heightDoorE = 18;
 
-// Empirically deducted dimensions
+#declare widthDoorG = 4;
+#declare heightDoorG = 2;
+
+// Empirically deducted or modified dimensions to correct
+// inconsistencies
 
 #declare lengthPlatformC = 44;
+#declare nbStairsA = 12;
 
 // Deducted platforms' and stairs' dimensions
 
@@ -117,12 +137,88 @@
     <
       0, 
       (lengthRoom - 2) / 2, 
+      3
+    >)
+  MakeWall(
+    <
+      -1, 
+      0, 
+      3
+    >,
+    <
+      0, 
+      heightPlatformD, 
+      3 + widthDoorB
+    >)
+  MakeWall(
+    <
+      -1, 
+      heightPlatformD + 1 + heightDoorB, 
+      3
+    >,
+    <
+      0, 
+      (lengthRoom - 2) / 2, 
+      3 + widthDoorB
+    >)
+  MakeWall(
+    <
+      -1, 
+      0, 
+      3 + widthDoorB
+    >,
+    <
+      0, 
+      (lengthRoom - 2) / 2, 
       (lengthRoom + 1) / 2
     >)
   scale scaleBlock
 }
 
 #declare SideWallUp = union {
+  difference {
+    MakeWall(
+      <
+        0, 
+        heightDoorA - 4, 
+        -1
+      >,
+      <
+        widthRoom, 
+        (lengthRoom - 2) / 2 - 4, 
+        0
+      >)
+    cylinder {
+      <0, 0, -10>, <0, 0, 10>, 1
+      scale <widthDoorA / 2, 4, 1>
+      translate <
+        widthRoom - 2 - widthDoorA / 2,
+        heightDoorA - 4,
+        0>
+    }
+  }
+  MakeWall(
+    <
+      0, 
+      (lengthRoom - 2) / 2 - 4, 
+      -1
+    >,
+    <
+      3, 
+      (lengthRoom - 2) / 2, 
+      0
+    >)
+  MakeWall(
+    <
+      3 + widthDoorC, 
+      (lengthRoom - 2) / 2 - 4, 
+      -1
+    >,
+    <
+      widthRoom, 
+      (lengthRoom - 2) / 2, 
+      0
+    >)
   MakeWall(
     <
       0, 
@@ -130,8 +226,19 @@
       -1
     >,
     <
+      widthRoom - 2 - widthDoorA, 
+      heightDoorA - 4, 
+      0
+    >)
+  MakeWall(
+    <
+      widthRoom - 2, 
+      0, 
+      -1
+    >,
+    <
       widthRoom, 
-      (lengthRoom - 2) / 2, 
+      heightDoorA - 4, 
       0
     >)
   scale scaleBlock
@@ -142,13 +249,90 @@
     <
       0, 
       -1, 
-      0
+      -lengthPlatformD * 2
+    >,
+    <
+      3, 
+      0,
+      lengthRoom / 2 + 1
+    >)
+  difference {
+    MakeWall(
+      <
+        3, 
+        -1, 
+        -lengthPlatformD * 2
+      >,
+      <
+        3 + widthDoorD, 
+        0,
+        lengthRoom / 2 - heightDoorD + 2
+      >)
+    cylinder {
+      <0, -10, 0> <0, 10, 0> 1
+      scale <widthDoorD / 2, 1, 2>
+      translate <
+        3 + widthDoorD / 2, 
+        0, 
+        lengthRoom / 2 - heightDoorD + 2>
+    }
+  }
+  MakeWall(
+    <
+      3, 
+      -1, 
+      lengthRoom / 2
+    >,
+    <
+      3 + widthDoorD, 
+      0,
+      lengthRoom / 2 + 1
+    >)
+  MakeWall(
+    <
+      3 + widthDoorD, 
+      -1, 
+      -lengthPlatformD * 2
+    >,
+    <
+      widthRoom - 3 - widthDoorC, 
+      0,
+      lengthRoom / 2 + 1
+    >)
+  difference {
+    MakeWall(
+      <
+        widthRoom - 3 - widthDoorC, 
+        -1, 
+        -lengthPlatformD * 2
+      >,
+      <
+        widthRoom - 3, 
+        0,
+        lengthRoom / 2 - (heightDoorC - 5) + 2
+      >)
+    cylinder {
+      <0, -10, 0> <0, 10, 0> 1
+      scale <widthDoorC / 2, 1, 2>
+      translate <
+        widthRoom - 3 - widthDoorC / 2, 
+        0, 
+        lengthRoom / 2 - (heightDoorC - 5) + 2>
+    }
+  }
+  MakeWall(
+    <
+      widthRoom - 3, 
+      -1, 
+      -lengthPlatformD * 2
     >,
     <
       widthRoom, 
       0,
       lengthRoom / 2 + 1
     >)
+
+
   scale scaleBlock
 }
 
@@ -158,6 +342,138 @@
       widthRoom, 
       0, 
       0
+    >,
+    <
+      widthRoom + 1, 
+      (lengthRoom - 2) / 2, 
+      19
+    >)
+  MakeWall(
+    <
+      widthRoom, 
+      0, 
+      19
+    >,
+    <
+      widthRoom + 1, 
+      heightPlatformC, 
+      19 + widthDoorE
+    >)
+  MakeWall(
+    <
+      widthRoom, 
+      heightPlatformC + 1 + heightDoorE, 
+      19
+    >,
+    <
+      widthRoom + 1, 
+      (lengthRoom - 2) / 2, 
+      19 + widthDoorE
+    >)
+  MakeWall(
+    <
+      widthRoom + 1, 
+      heightPlatformC + 1, 
+      18
+    >,
+    <
+      widthRoom + 6, 
+      heightPlatformC + 1 + heightDoorE, 
+      19
+    >)
+  MakeWall(
+    <
+      widthRoom + 1, 
+      heightPlatformC + 1, 
+      19 + widthDoorE
+    >,
+    <
+      widthRoom + 6, 
+      heightPlatformC + 1 + heightDoorE, 
+      19 + widthDoorE + 1
+    >)
+  MakeWall(
+    <
+      widthRoom + 17, 
+      heightPlatformC + 1, 
+      19 - 8
+    >,
+    <
+      widthRoom + 18, 
+      heightPlatformC + 1 + heightDoorE, 
+      19 + widthDoorE + 8
+    >)
+  MakeWall(
+    <
+      widthRoom, 
+      0, 
+      19 + widthDoorE
+    >,
+    <
+      widthRoom + 1, 
+      (lengthRoom - 2) / 2, 
+      19 + widthDoorE + 6
+    >)
+  MakeWall(
+    <
+      widthRoom, 
+      0, 
+      19 + widthDoorE + 6
+    >,
+    <
+      widthRoom + 1, 
+      heightPlatformC + 1 - heightDoorG, 
+      19 + widthDoorE + 6 + widthDoorG
+    >)
+  MakeWall(
+    <
+      widthRoom, 
+      heightPlatformC + 1 + heightDoorG, 
+      19 + widthDoorE + 6
+    >,
+    <
+      widthRoom + 1, 
+      (lengthRoom - 2) / 2, 
+      19 + widthDoorE + 6 + widthDoorG
+    >)
+  MakeWall(
+    <
+      widthRoom + 1, 
+      heightPlatformC + 1 - heightDoorG, 
+      19 + widthDoorE + 5
+    >,
+    <
+      widthRoom + 5, 
+      heightPlatformC + 1 + heightDoorG, 
+      19 + widthDoorE + 6
+    >)
+  MakeWall(
+    <
+      widthRoom + 1, 
+      heightPlatformC + 1 - heightDoorG, 
+      19 + widthDoorE + 6 + widthDoorG
+    >,
+    <
+      widthRoom + 5, 
+      heightPlatformC + 1 + heightDoorG, 
+      19 + widthDoorE + 6 + widthDoorG + 1
+    >)
+  MakeWall(
+    <
+      widthRoom + 1, 
+      heightPlatformC + 1 - heightDoorG - 1, 
+      19 + widthDoorE + 6
+    >,
+    <
+      widthRoom + 5, 
+      heightPlatformC + 1 - heightDoorG, 
+      19 + widthDoorE + 6 + widthDoorG
+    >)
+  MakeWall(
+    <
+      widthRoom, 
+      0, 
+      19 + widthDoorE + 6 + widthDoorG
     >,
     <
       widthRoom + 1, 
@@ -181,7 +497,7 @@
     <
       0, 
       heightPlatformA, 
-      -10
+      -20
     >,
     <
       widthPlatformA, 
@@ -197,7 +513,7 @@
     <
       widthPlatformA, 
       heightPlatformA + 1, 
-      lengthPlatformA + 4
+      lengthPlatformA + 2
     >)
   MakeWall(
     <
@@ -208,8 +524,26 @@
     <
       3, 
       heightPlatformA + 1, 
-      lengthPlatformA + 4
+      lengthPlatformA + 2
     >)
+  difference {
+    MakeWall(
+      <
+        0, 
+        heightPlatformA, 
+        lengthPlatformA + 2
+      >,
+      <
+        widthPlatformA, 
+        heightPlatformA + 1, 
+        lengthPlatformA + 4
+      >)
+    cylinder {
+      <0, -10, 0> <0, 10, 0>, 1
+      scale <1.5, 1, 1>
+      translate <4.5, heightPlatformA, lengthPlatformA + 2>
+    }
+  }
   MakeWall(
     <
       0, 
@@ -254,6 +588,33 @@
       heightPlatformA + 1, 
       lengthPlatformA + 16
     >)
+  MakeWall(
+    <
+      0, 
+      heightPlatformA - widthStairsC / 2, 
+      lengthPlatformA - 1
+    >,
+    <
+      widthStairsC, 
+      heightPlatformA, 
+      lengthPlatformA
+    >)
+  object {
+    Block()
+    scale <1, 1, 0.5>
+    translate <
+      widthPlatformB - 0.5,
+      heightPlatformA + 0.5,
+      lengthPlatformA + 8.25>
+  }
+  object {
+    Block()
+    scale <1, 1, 0.5>
+    translate <
+      widthPlatformB - 0.5,
+      heightPlatformA + 0.5,
+      lengthPlatformA + 11.75>
+  }
   scale scaleBlock
 }
 
@@ -277,10 +638,10 @@
     <
       widthRoom - widthPlatformC, 
       heightPlatformC, 
-      0
+      -10
     >,
     <
-      widthRoom, 
+      widthRoom + 30, 
       heightPlatformC + 1, 
       lengthPlatformC
     >)
@@ -295,6 +656,17 @@
       heightPlatformC + 1, 
       lengthPlatformC + widthStairsA
     >)
+  MakeWall(
+    <
+      widthRoom - 3, 
+      heightPlatformC - 3, 
+      lengthPlatformC + widthStairsA
+    >,
+    <
+      widthRoom, 
+      heightPlatformC, 
+      lengthPlatformC + widthStairsA + 1
+    >)
   scale scaleBlock
 }
 
@@ -303,7 +675,7 @@
     <
       -widthPlatformD, 
       heightPlatformD, 
-      0
+      -lengthPlatformD
     >,
     <
       widthPlatformD, 
@@ -326,10 +698,10 @@
   MakeStairs(
      widthStairsA, 
      nbStairsA, 
-     posStairsA, 
-     y * slopeUpStairsA, 
+     posStairsA - y * 0.6, 
+     y * slopeUpStairsA * 1.03, 
      z, 
-    -x * slopeFrontStairsA)
+    -x * slopeFrontStairsA * 1.0)
   scale scaleBlock
 }
 
@@ -337,10 +709,10 @@
   MakeStairs(
     widthStairsB, 
     nbStairsB, 
-    posStairsB, 
-    y * slopeUpStairsB, 
+    posStairsB + y * 0.25, 
+    y * slopeUpStairsB * 0.97, 
     z, 
-    x * slopeFrontStairsB)
+    x * slopeFrontStairsB * 1.02)
   scale scaleBlock
 }
 
@@ -402,9 +774,9 @@
       object { Stairs }
 
       // Rotate the quarter along the horizontal axis
-      translate <0, -lengthRoom / 2, -lengthRoom /2> * scaleBlock
+      translate <0, -lengthRoom / 2, -lengthRoom / 2> * scaleBlock
       rotate x * 90.0 * iQuarter
-      translate <0, lengthRoom / 2, lengthRoom /2> * scaleBlock
+      translate <0, lengthRoom / 2, lengthRoom / 2> * scaleBlock
 
       // Apply the symmetry to the odd quarters
       #if (iQuarter = 1 | iQuarter = 3)
@@ -420,6 +792,9 @@
 
 #declare posCamera = <widthRoom / 2, lengthRoom / 2, lengthRoom / 2> * scaleBlock;
 #declare lookAt = <widthRoom / 2, 0, 0.25 * lengthRoom> * scaleBlock;
+
+//#declare posCamera = (posStairsA - 3 + 3 * y) * scaleBlock;
+//#declare lookAt = posStairsA * scaleBlock;
 
 camera {
   cylinder 2
