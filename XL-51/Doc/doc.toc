@@ -1,8 +1,8 @@
-\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1}Introduction}{2}
 \contentsline {section}{\numberline {2}First analysis of the original lithograph}{2}
 \contentsline {subsection}{\numberline {2.1}Dimensions}{2}
 \contentsline {subsection}{\numberline {2.2}Colors}{2}
-\contentsline {subsection}{\numberline {2.3}Building structure}{2}
+\contentsline {subsection}{\numberline {2.3}Building structure}{3}
 \contentsline {subsection}{\numberline {2.4}Building dimensions}{7}
 \contentsline {subsection}{\numberline {2.5}View point}{8}
 \contentsline {section}{\numberline {3}Prototype model}{9}
@@ -14,3 +14,4 @@
 \contentsline {subsection}{\numberline {4.5}Finalization of the model}{72}
 \contentsline {section}{\numberline {5}Light model}{90}
 \contentsline {section}{\numberline {6}Block texture model}{130}
+\contentsline {section}{\numberline {7}To do}{151}
