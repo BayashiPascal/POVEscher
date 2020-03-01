@@ -7,6 +7,17 @@
 // Rendering parameters
 
 background { color rgb 1.0 }
+#include "rad_def.inc"
+global_settings {
+   radiosity {
+      Rad_Settings(Radiosity_Normal,off,off)
+      error_bound 2.0
+      count 200 //100
+   }
+}
+#default {finish{ambient 0.}}
+#declare nbQuarter = 4;
+declare lightIntensity = 1.0 / (nbQuarter * 3);
 
 // ------ Scene elements' dimensions ------
 
@@ -136,7 +147,7 @@ background { color rgb 1.0 }
     >,
     <
       0, 
-      (lengthRoom - 2) / 2, 
+      (lengthRoom - 1) / 2, 
       3
     >)
   MakeWall(
@@ -158,7 +169,7 @@ background { color rgb 1.0 }
     >,
     <
       0, 
-      (lengthRoom - 2) / 2, 
+      (lengthRoom - 1) / 2, 
       3 + widthDoorB
     >)
   MakeWall(
@@ -169,7 +180,7 @@ background { color rgb 1.0 }
     >,
     <
       0, 
-      (lengthRoom - 2) / 2, 
+      (lengthRoom - 1) / 2, 
       (lengthRoom + 1) / 2
     >)
   scale scaleBlock
@@ -179,7 +190,7 @@ background { color rgb 1.0 }
   difference {
     MakeWall(
       <
-        0, 
+        -1, 
         heightDoorA - 4, 
         -1
       >,
@@ -199,7 +210,7 @@ background { color rgb 1.0 }
   }
   MakeWall(
     <
-      0, 
+      -1, 
       (lengthRoom - 2) / 2 - 4, 
       -1
     >,
@@ -215,7 +226,7 @@ background { color rgb 1.0 }
       -1
     >,
     <
-      widthRoom, 
+      widthRoom + 1, 
       (lengthRoom - 2) / 2, 
       0
     >)
@@ -237,7 +248,7 @@ background { color rgb 1.0 }
       -1
     >,
     <
-      widthRoom, 
+      widthRoom + 1, 
       heightDoorA - 4, 
       0
     >)
@@ -247,7 +258,7 @@ background { color rgb 1.0 }
 #declare SideWallDown = union {
   MakeWall(
     <
-      0, 
+      -1, 
       -1, 
       -lengthPlatformD * 2
     >,
@@ -327,12 +338,10 @@ background { color rgb 1.0 }
       -lengthPlatformD * 2
     >,
     <
-      widthRoom, 
+      widthRoom + 1, 
       0,
       lengthRoom / 2 + 1
     >)
-
-
   scale scaleBlock
 }
 
@@ -345,7 +354,7 @@ background { color rgb 1.0 }
     >,
     <
       widthRoom + 1, 
-      (lengthRoom - 2) / 2, 
+      (lengthRoom - 1) / 2, 
       19
     >)
   MakeWall(
@@ -367,7 +376,7 @@ background { color rgb 1.0 }
     >,
     <
       widthRoom + 1, 
-      (lengthRoom - 2) / 2, 
+      (lengthRoom - 1) / 2, 
       19 + widthDoorE
     >)
   MakeWall(
@@ -411,7 +420,7 @@ background { color rgb 1.0 }
     >,
     <
       widthRoom + 1, 
-      (lengthRoom - 2) / 2, 
+      (lengthRoom - 1) / 2, 
       19 + widthDoorE + 6
     >)
   MakeWall(
@@ -433,7 +442,7 @@ background { color rgb 1.0 }
     >,
     <
       widthRoom + 1, 
-      (lengthRoom - 2) / 2, 
+      (lengthRoom - 1) / 2, 
       19 + widthDoorE + 6 + widthDoorG
     >)
   MakeWall(
@@ -477,7 +486,7 @@ background { color rgb 1.0 }
     >,
     <
       widthRoom + 1, 
-      (lengthRoom - 2) / 2, 
+      (lengthRoom - 1) / 2, 
       (lengthRoom + 1) / 2
     >)
   scale scaleBlock
@@ -764,7 +773,6 @@ background { color rgb 1.0 }
 
   // Loop on the four quarters of the house
   #declare iQuarter = 0;
-  #declare nbQuarter = 4;
   #while (iQuarter < nbQuarter)
     union {
 
@@ -790,7 +798,8 @@ background { color rgb 1.0 }
 
 // ------ Camera ------
 
-#declare posCamera = <widthRoom / 2, lengthRoom / 2, lengthRoom / 2> * scaleBlock;
+// Move the camera by epsilon to avoid aligning with the interstice between block
+#declare posCamera = <widthRoom / 2, lengthRoom / 2, lengthRoom / 2> * scaleBlock + 0.1 * y + 0.1 * z;
 #declare lookAt = <widthRoom / 2, 0, 0.25 * lengthRoom> * scaleBlock;
 
 //#declare posCamera = (posStairsA - 3 + 3 * y) * scaleBlock;
@@ -807,10 +816,101 @@ camera {
 
 // ------ Light ------
 
-light_source {
+/*light_source {
   posCamera
   color rgb 1.0
+}*/
+
+#declare Lights = union {
+
+  // Loop on the four quarters of the house
+  #declare iQuarter = 0;
+  #while (iQuarter < nbQuarter)
+
+    // Lights
+    light_source {
+      <widthRoom - 2 - widthDoorA / 2 - 1, heightDoorA, -5>
+      color rgb 1.0 * lightIntensity
+      area_light <2, 0, 0> <0, 2, 0> 4, 4 adaptive 0 jitter
+
+      // Rotate the quarter along the horizontal axis
+      translate <0, -lengthRoom / 2, -lengthRoom / 2> * scaleBlock
+      rotate x * 90.0 * iQuarter
+      translate <0, lengthRoom / 2, lengthRoom / 2> * scaleBlock
+
+      // Apply the symmetry to the odd quarters
+      #if (iQuarter = 1 | iQuarter = 3)
+        scale <-1.0, 1.0, 1.0>
+        translate widthRoom * x * scaleBlock
+      #end
+      //scale scaleBlock
+    }
+
+    light_source {
+      <-5, heightPlatformD + 1 + heightDoorB, 3 + widthDoorB / 2>
+      color rgb 1.0 * lightIntensity
+      area_light <0, 2, 0> <0, 0, 2> 4, 4 adaptive 0 jitter
+
+      // Rotate the quarter along the horizontal axis
+      translate <0, -lengthRoom / 2, -lengthRoom / 2> * scaleBlock
+      rotate x * 90.0 * iQuarter
+      translate <0, lengthRoom / 2, lengthRoom / 2> * scaleBlock
+
+      // Apply the symmetry to the odd quarters
+      #if (iQuarter = 1 | iQuarter = 3)
+        scale <-1.0, 1.0, 1.0>
+        translate widthRoom * x * scaleBlock
+      #end
+      //scale scaleBlock
+    }
+
+    light_source {
+      <3 + widthDoorC / 2, heightPlatformA + 1 + heightDoorC, -5>
+      color rgb 1.0 * lightIntensity
+      area_light <2, 0, 0> <0, 2, 0> 4, 4 adaptive 0 jitter
+
+      // Rotate the quarter along the horizontal axis
+      translate <0, -lengthRoom / 2, -lengthRoom / 2> * scaleBlock
+      rotate x * 90.0 * iQuarter
+      translate <0, lengthRoom / 2, lengthRoom / 2> * scaleBlock
+
+      // Apply the symmetry to the odd quarters
+      #if (iQuarter = 1 | iQuarter = 3)
+        scale <-1.0, 1.0, 1.0>
+        translate widthRoom * x * scaleBlock
+      #end
+      //scale scaleBlock
+    }
+
+    light_source {
+      <widthRoom + 2, heightPlatformC + 1 + heightDoorE - 1, 19 + widthDoorE / 2> * scaleBlock
+      color rgb 1.0 * lightIntensity
+      area_light <2, 0, 0> <0, 0, 2> 4, 4 adaptive 0 jitter
+
+      // Rotate the quarter along the horizontal axis
+      translate <0, -lengthRoom / 2, -lengthRoom / 2> * scaleBlock
+      rotate x * 90.0 * iQuarter
+      translate <0, lengthRoom / 2, lengthRoom / 2> * scaleBlock
+
+      // Apply the symmetry to the odd quarters
+      #if (iQuarter = 1 | iQuarter = 3)
+        scale <-1.0, 1.0, 1.0>
+        translate widthRoom * x * scaleBlock
+      #end
+      //scale scaleBlock
+    }
+
+    #declare iQuarter = iQuarter + 1;
+  #end
+
+  /*light_source {
+    <widthRoom / 2, lengthRoom / 2, lengthRoom / 2>
+    color rgb 0.1
+  }*/
+
 }
+
+object { Lights }
 
 // ------ Scene ------
 

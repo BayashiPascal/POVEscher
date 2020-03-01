@@ -31,7 +31,7 @@
       bumps 0.25 scale .02
     }
     finish { 
-      ambient 0.0 diffuse 1.0 
+      ambient 0.0 diffuse 1.0
     }
   }
 #end
@@ -53,6 +53,16 @@
 #end
 
 // Make the wall equivalent to box {posMin, posMax} made of blocks
+
+#macro MakeWallSimple(
+    posMin, 
+    posMax)
+  box {
+    posMin, posMax
+    BlockTex()
+    //texture { pigment {color rgb 1.0 } }
+  }
+#end
 
 #macro MakeWall(
     posMin, 
@@ -102,6 +112,7 @@
     #end
     translate startPos
     BlockTex()
+    //texture { pigment {color rgb 1.0 } }
   }
 #end
 
