@@ -469,6 +469,33 @@ Now I have to solve another problem which is the lighting of the House.\\
 
 Until now I was using one point light at the location of the camera. Instead I want to use the shadows in the lithography to search for the position of the lights. For example we see clearly that there is light coming from the outside of the doors in the front wall. I start from there.\\
 
+blocks.inc:\\
+\begin{scriptsize}
+\begin{ttfamily}
+\lstinputlisting[breaklines]{./blocks_5.inc}
+\end{ttfamily}
+\end{scriptsize}
+
+XL-51.pov:\\
+\begin{scriptsize}
+\begin{ttfamily}
+\lstinputlisting[breaklines]{./XL-51_14.pov}
+\end{ttfamily}
+\end{scriptsize}
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{./XL-51_14.png}\\
+\end{figure}
+\end{center}
+
+By adding lights behind the doors of the front walls and one in the door E on the side walls I get something pretty satisfying but too dark. There are also some problem due to radiosity on the stairs of the up wall, a problem in the texture of the round portion of the wall, and problems due to spaces between blocks (as I randomize slightly there shape for a more beautifull result.\\
+
+The result is also quite different from the lithography but I give up on that as the lighting in Escher's work is definitely unrealistic. So I concentrate on the problems above and a solution that pleases me rather than replicates the lithography.\\
+
+
+
 \end{document}
 
 
