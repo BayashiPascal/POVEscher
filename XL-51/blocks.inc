@@ -25,7 +25,7 @@
 #macro BlockTex()
   texture {
     pigment {
-      color rgb (1.0 - blockRandomness) * RandAroungOne(0.25)
+      color rgb 1.0 * RandAroungOne(0.25)
     }
     normal { 
       bumps 0.25 scale .02
@@ -54,7 +54,7 @@
 
 // Make the wall equivalent to box {posMin, posMax} made of blocks
 
-#macro MakeWallSimple(
+#macro MakeWallBox(
     posMin, 
     posMax)
   box {

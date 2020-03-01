@@ -1,3 +1,5 @@
+#version 3.7;
+
 // ------ Includes ------
 
 // Include the macros relative to blocks
@@ -12,12 +14,13 @@ global_settings {
    radiosity {
       Rad_Settings(Radiosity_Normal,off,off)
       error_bound 2.0
-      count 300 //200
+      count 300
    }
+   assumed_gamma 1.0
 }
 #default {finish{ambient 0.}}
 #declare nbQuarter = 4;
-declare lightIntensity = 1.0 / (nbQuarter * 3);
+#declare lightIntensity = 1.0 / (nbQuarter * 3);
 
 // ------ Scene elements' dimensions ------
 
@@ -631,7 +634,7 @@ declare lightIntensity = 1.0 / (nbQuarter * 3);
   scale scaleBlock
 }
 
-#declare PlatformB = union {
+#declare PlatformB = object {
   MakeWall(
     <
       0, 
@@ -683,7 +686,7 @@ declare lightIntensity = 1.0 / (nbQuarter * 3);
   scale scaleBlock
 }
 
-#declare PlatformD = union {
+#declare PlatformD = object {
   MakeWall(
     <
       -widthPlatformD, 
@@ -722,10 +725,10 @@ declare lightIntensity = 1.0 / (nbQuarter * 3);
   MakeStairs(
     widthStairsB, 
     nbStairsB, 
-    posStairsB + y * 0.25, 
-    y * slopeUpStairsB * 0.97, 
+    posStairsB + y * 0.255,
+    y * slopeUpStairsB * 0.96,
     z, 
-    x * slopeFrontStairsB * 1.02)
+    x * slopeFrontStairsB * 0.9) // * 1.02)
   scale scaleBlock
 }
 
