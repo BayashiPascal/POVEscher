@@ -13,3 +13,4 @@
 \contentsline {subsection}{\numberline {4.4}Moving the origin to the corner of the House}{58}
 \contentsline {subsection}{\numberline {4.5}Finalization of the model}{72}
 \contentsline {section}{\numberline {5}Light model}{90}
+\contentsline {section}{\numberline {6}Block texture model}{130}
