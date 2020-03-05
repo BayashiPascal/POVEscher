@@ -1,0 +1,147 @@
+povray -W3748 -H7433 -D -P -Q9 +A -UA -IdoorAView.pov
+Persistence of Vision(tm) Ray Tracer Version 3.7.0.8.unofficial (g++ 7 @
+ x86_64-pc-linux-gnu)
+This is an unofficial version compiled by:
+ Pascal Baillehache <bayashipascal@gmail.com>
+ The POV-Ray Team is not responsible for supporting this version.
+
+POV-Ray is based on DKBTrace 2.12 by David K. Buck & Aaron A. Collins
+Copyright 1991-2013 Persistence of Vision Raytracer Pty. Ltd.
+
+Primary POV-Ray 3.7 Architects/Developers: (Alphabetically)
+  Chris Cason         Thorsten Froehlich  Christoph Lipka   
+
+With Assistance From: (Alphabetically)
+  Nicolas Calimet     Jerome Grimbert     James Holsenback    Christoph Hormann 
+  Nathan Kopp         Juha Nieminen     
+
+Past Contributors: (Alphabetically)
+  Steve Anger         Eric Barish         Dieter Bayer        David K. Buck     
+  Nicolas Calimet     Chris Cason         Aaron A. Collins    Chris Dailey      
+  Steve Demlow        Andreas Dilger      Alexander Enzmann   Dan Farmer        
+  Thorsten Froehlich  Mark Gordon         James Holsenback    Christoph Hormann 
+  Mike Hough          Chris Huff          Kari Kivisalo       Nathan Kopp       
+  Lutz Kretzschmar    Christoph Lipka     Jochen Lippert      Pascal Massimino  
+  Jim McElhiney       Douglas Muir        Juha Nieminen       Ron Parker        
+  Bill Pulver         Eduard Schwan       Wlodzimierz Skiba   Robert Skinner    
+  Yvo Smellenbergh    Zsolt Szalavari     Scott Taylor        Massimo Valentini 
+  Timothy Wegner      Drew Wells          Chris Young       
+
+Other contributors are listed in the documentation.
+
+Support libraries used by POV-Ray:
+  ZLib 1.2.11, Copyright 1995-2012 Jean-loup Gailly and Mark Adler
+  LibPNG 1.6.34, Copyright 1998-2012 Glenn Randers-Pehrson
+  LibJPEG 80, Copyright 1991-2013 Thomas G. Lane, Guido Vollbeding
+  LibTIFF 4.0.9, Copyright 1988-1997 Sam Leffler, 1991-1997 SGI
+  Boost 1.65, http://www.boost.org/
+
+Parser Options
+  Input file: doorAView.pov
+  Remove bounds........On 
+  Split unions.........Off
+  Library paths:
+    /usr/local/share/povray-3.7
+    /usr/local/share/povray-3.7/ini
+    /usr/local/share/povray-3.7/include
+  Clock value:    0.000  (Animation off)
+Image Output Options
+  Image resolution.....3748 by 7433 (rows 1 to 7433, columns 1 to 3748).
+  Output file..........doorAView.png, 24 bpp PNG
+  Dithering............Off
+  Graphic display......Off
+  Mosaic preview.......Off
+  Continued trace......Off
+Information Output Options
+  All Streams to console..........On 
+  Debug Stream to console.........On 
+  Fatal Stream to console.........On 
+  Render Stream to console........On 
+  Statistics Stream to console....On 
+  Warning Stream to console.......On 
+==== [Parsing...] ==========================================================
+
+Radiosity_Normal in use
+----------------------------------------------------------------------------
+Parser Statistics
+----------------------------------------------------------------------------
+Finite Objects:        45248
+Infinite Objects:          0
+Light Sources:            20
+Total:                 45268
+----------------------------------------------------------------------------
+Parser Time
+  Parse Time:       0 hours  0 minutes  0 seconds (0.540 seconds)
+              using 1 thread(s) with 0.536 CPU-seconds total
+  Bounding Time:    0 hours  0 minutes  0 seconds (0.045 seconds)
+              using 1 thread(s) with 0.044 CPU-seconds total
+----------------------------------------------------------------------------
+Render Options
+  Quality:  9
+  Bounding boxes.......On   Bounding threshold: 3
+  Antialiasing.........On  (Method 1, Threshold 0.300, Depth 3, Jitter 1.00,
+ Gamma 2.50)
+==== [Rendering...] ========================================================
+Rendered 27858884 of 27858884 pixels (100%) (11%)
+----------------------------------------------------------------------------
+Render Statistics
+Image Resolution 3748 x 7433
+----------------------------------------------------------------------------
+Pixels:         29616078   Samples:         5924304   Smpls/Pxl: 0.20
+Rays:           43452582   Saved:                 0   Max Level: 2/5
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded  Percentage
+----------------------------------------------------------------------------
+Cone/Cylinder               1370609601       263903147     19.25
+CSG Intersection            1370609601      1063405082     77.59
+CSG Union                   1370609601      1081733502     78.92
+Superellipsoid           1169576611237      4484896389      0.38
+Bounding Box              152254082876     38234181912     25.11
+----------------------------------------------------------------------------
+Shadow Ray Tests:        3095468308   Succeeded:            2581612922
+Shadow Cache Hits:        589071133
+----------------------------------------------------------------------------
+Radiosity samples calculated:            26374 (0.08 %)
+  discarded due to low quality:            264
+  retained for re-use:                   26110
+Radiosity samples reused:             34800790
+Radiosity sample rays shot:            7912200
+Radiosity octree nodes:                   2621
+Radiosity octree samples/node:            9.96
+Radiosity blocks examined:         14263037877
+Radiosity blocks passed test 0:    14263037877 (100.00 %)
+Radiosity blocks passed test 1:     1602836476 (11.24 %)
+Radiosity blocks passed test 2:     1225778875 (8.59 %)
+Radiosity blocks passed test 3:      588681683 (4.13 %)
+Radiosity blocks passed test 4:      439262746 (3.08 %)
+Radiosity blocks passed test 5:      421439940 (2.95 %)
+Radiosity blocks rejected:         13841597937 (97.05 %)
+----------------------------------------------------------------------------
+Radiosity Depth 0 calculated:            26374 (0.08 %)
+Radiosity Depth 0 reused:             34800790
+Radiosity Depth 0 rays shot:           7912200
+----------------------------------------------------------------------------
+Radiosity (final) calculated:            24353 (0.07 %)
+Radiosity (final) reused:             34796149
+Radiosity (final) rays shot:           7305900
+----------------------------------------------------------------------------
+  Pass     Depth 0           Total
+----------------------------------------------------------------------------
+  1             88              88
+  2            260             260
+  3            603             603
+  4           1070            1070
+  Final      24353           24353
+----------------------------------------------------------------------------
+  Total      26374           26374
+  Weight     1.007 
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Render Time:
+  Photon Time:      No photons
+  Radiosity Time:   0 hours  2 minutes 11 seconds (131.346 seconds)
+              using 12 thread(s) with 1495.932 CPU-seconds total
+  Trace Time:       8 hours 50 minutes 12 seconds (31812.960 seconds)
+              using 12 thread(s) with 379908.785 CPU-seconds total
+POV-Ray finished
+

@@ -68,6 +68,17 @@
     posMin, 
     posMax)
   union {
+    /*box {
+      posMin, posMax
+      translate -0.5 * (posMax - posMin) - posMin
+      scale <
+        (posMax.x - posMin.x - 0.5) / (posMax.x - posMin.x),
+        (posMax.y - posMin.y - 0.5) / (posMax.y - posMin.y),
+        (posMax.z - posMin.z - 0.5) / (posMax.z - posMin.z)
+        >
+      translate 0.5 * (posMax - posMin) + posMin
+      BlockTex()
+    }*/
     #local wallX = posMin.x;
     #while (wallX < posMax.x)
       #local wallY = posMin.y;
@@ -116,13 +127,15 @@
   }
 #end
 
+// If oddity = 1 the first element is vertical, else its horizontal
 #macro MakeStairs(
     widthStair, 
     nbStair, 
     startPos, 
     upVec, 
     rightVec, 
-    frontVec) 
+    frontVec,
+    oddity) 
   union {
     #local oneStairBottom = 
       -0.5 * widthStair * rightVec + (1.0 - stairThickness) * vnormalize(upVec);
@@ -150,6 +163,16 @@
             translate -1.0 * upVec * stairThickness
             translate rightVec * (jStair - 0.5 * widthStair)
             translate (frontVec + upVec) * iStair
+          }
+        #end
+        #if (iStair = 0 & oddity = 1)
+          superellipsoid {
+            <blockRoundness, blockRoundness>
+            scale 0.5
+            translate 0.5
+            scale vnormalize(rightVec) + upVec + frontVec * stairThickness
+            translate rightVec * (jStair - 0.5 * widthStair)
+            translate -1.0 * upVec * stairThickness
           }
         #end
         #declare jStair = jStair + 1;

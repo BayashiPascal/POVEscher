@@ -65,16 +65,16 @@ Radiosity_Normal in use
 ----------------------------------------------------------------------------
 Parser Statistics
 ----------------------------------------------------------------------------
-Finite Objects:        45040
+Finite Objects:        45260
 Infinite Objects:          0
 Light Sources:            20
-Total:                 45060
+Total:                 45280
 ----------------------------------------------------------------------------
 Parser Time
-  Parse Time:       0 hours  0 minutes  0 seconds (0.560 seconds)
-              using 1 thread(s) with 0.556 CPU-seconds total
-  Bounding Time:    0 hours  0 minutes  0 seconds (0.044 seconds)
-              using 1 thread(s) with 0.043 CPU-seconds total
+  Parse Time:       0 hours  0 minutes  0 seconds (0.572 seconds)
+              using 1 thread(s) with 0.567 CPU-seconds total
+  Bounding Time:    0 hours  0 minutes  0 seconds (0.047 seconds)
+              using 1 thread(s) with 0.047 CPU-seconds total
 ----------------------------------------------------------------------------
 Render Options
   Quality:  9
@@ -87,60 +87,60 @@ Rendered 27858884 of 27858884 pixels (100%)
 Render Statistics
 Image Resolution 3748 x 7433
 ----------------------------------------------------------------------------
-Pixels:         29616078   Samples:         8153577   Smpls/Pxl: 0.28
-Rays:           47020455   Saved:                 0   Max Level: 2/5
+Pixels:         29616078   Samples:         8108739   Smpls/Pxl: 0.27
+Rays:           46930917   Saved:                 0   Max Level: 2/5
 ----------------------------------------------------------------------------
 Ray->Shape Intersection          Tests       Succeeded  Percentage
 ----------------------------------------------------------------------------
-Cone/Cylinder                800541304        62269766      7.78
-CSG Intersection             800541304       621516828     77.64
-CSG Union                    800541304       630378993     78.74
-Superellipsoid            569368113283      3388745369      0.60
-Bounding Box              160684858835     42153136061     26.23
+Cone/Cylinder                797069563        62296494      7.82
+CSG Intersection             797069563       619562996     77.73
+CSG Union                    797069563       628269344     78.82
+Superellipsoid            566359576109      3384171964      0.60
+Bounding Box              162105610840     40871871646     25.21
 ----------------------------------------------------------------------------
-Shadow Ray Tests:        3084294831   Succeeded:            2444690447
-Shadow Cache Hits:        824048639
+Shadow Ray Tests:        3078473867   Succeeded:            2440866275
+Shadow Cache Hits:        823658877
 ----------------------------------------------------------------------------
-Radiosity samples calculated:            30836 (0.08 %)
-  discarded due to low quality:            132
-  retained for re-use:                   30704
-Radiosity samples reused:             37428746
-Radiosity sample rays shot:            9250800
-Radiosity octree nodes:                   2882
-Radiosity octree samples/node:           10.65
-Radiosity blocks examined:         18693521687
-Radiosity blocks passed test 0:    18693521687 (100.00 %)
-Radiosity blocks passed test 1:     1817671955 (9.72 %)
-Radiosity blocks passed test 2:     1351159096 (7.23 %)
-Radiosity blocks passed test 3:      533862944 (2.86 %)
-Radiosity blocks passed test 4:      393398448 (2.10 %)
-Radiosity blocks passed test 5:      378340950 (2.02 %)
-Radiosity blocks rejected:         18315180737 (97.98 %)
+Radiosity samples calculated:            30687 (0.08 %)
+  discarded due to low quality:            125
+  retained for re-use:                   30562
+Radiosity samples reused:             37384410
+Radiosity sample rays shot:            9206100
+Radiosity octree nodes:                   2899
+Radiosity octree samples/node:           10.54
+Radiosity blocks examined:         18716452267
+Radiosity blocks passed test 0:    18716452267 (100.00 %)
+Radiosity blocks passed test 1:     1833914249 (9.80 %)
+Radiosity blocks passed test 2:     1359688924 (7.26 %)
+Radiosity blocks passed test 3:      539603130 (2.88 %)
+Radiosity blocks passed test 4:      398694622 (2.13 %)
+Radiosity blocks passed test 5:      383351719 (2.05 %)
+Radiosity blocks rejected:         18333100548 (97.95 %)
 ----------------------------------------------------------------------------
-Radiosity Depth 0 calculated:            30836 (0.08 %)
-Radiosity Depth 0 reused:             37428746
-Radiosity Depth 0 rays shot:           9250800
+Radiosity Depth 0 calculated:            30687 (0.08 %)
+Radiosity Depth 0 reused:             37384410
+Radiosity Depth 0 rays shot:           9206100
 ----------------------------------------------------------------------------
-Radiosity (final) calculated:            28425 (0.08 %)
-Radiosity (final) reused:             37424406
-Radiosity (final) rays shot:           8527500
+Radiosity (final) calculated:            28266 (0.08 %)
+Radiosity (final) reused:             37380080
+Radiosity (final) rays shot:           8479800
 ----------------------------------------------------------------------------
   Pass     Depth 0           Total
 ----------------------------------------------------------------------------
   1             90              90
-  2            272             272
-  3            695             695
-  4           1354            1354
-  Final      28425           28425
+  2            271             271
+  3            690             690
+  4           1370            1370
+  Final      28266           28266
 ----------------------------------------------------------------------------
-  Total      30836           30836
-  Weight     0.994 
+  Total      30687           30687
+  Weight     1.009 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 Render Time:
   Photon Time:      No photons
-  Radiosity Time:   0 hours  0 minutes 53 seconds (53.240 seconds)
-              using 12 thread(s) with 619.046 CPU-seconds total
-  Trace Time:       2 hours 38 minutes 37 seconds (9517.705 seconds)
-              using 12 thread(s) with 112796.433 CPU-seconds total
+  Radiosity Time:   0 hours  0 minutes 55 seconds (55.034 seconds)
+              using 12 thread(s) with 631.091 CPU-seconds total
+  Trace Time:       2 hours 33 minutes  3 seconds (9183.252 seconds)
+              using 12 thread(s) with 110056.314 CPU-seconds total
 POV-Ray finished
