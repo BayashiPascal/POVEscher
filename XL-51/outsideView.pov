@@ -5,7 +5,7 @@
 // Rendering parameters
 
 #declare nbQuarter = 4;
-#declare lightIntensity = 1.0 / (nbQuarter * 3);
+#declare lightIntensity = 0.001 / (nbQuarter * 3);
 
 background { color rgb 1.0 }
 #include "rad_def.inc"
@@ -26,7 +26,7 @@ global_settings {
 // ------ Camera ------
 
 // Move the camera by epsilon to avoid aligning with the interstice between block
-#declare posCamera = <widthRoom, lengthRoom * 0.75, lengthRoom> * scaleBlock * 1.2;
+#declare posCamera = <-0.5 * widthRoom, lengthRoom * 0.75, lengthRoom * 1.25> * scaleBlock;
 #declare lookAt = <widthRoom / 2, lengthRoom / 2, lengthRoom / 2> * scaleBlock;
 
 camera {
